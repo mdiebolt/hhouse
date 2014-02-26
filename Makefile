@@ -3,9 +3,9 @@ all: run
 run: watch serve
 
 build:
-	node_modules/.bin/coffee -co public/javascripts source/javascripts
-	node_modules/.bin/stylus -o public/stylesheets source/stylesheets
-	node_modules/.bin/jade -Po public source/templates
+	node_modules/.bin/coffee -c javascripts
+	node_modules/.bin/stylus stylesheets
+	node_modules/.bin/jade -Po . templates
 
 deploy: build push
 
@@ -16,11 +16,11 @@ push:
 	git checkout master
 
 serve:
-	node_modules/.bin/http-server -p 5000
+	node_modules/.bin/http-server -p 5000 .
 
 watch:
-	node_modules/.bin/coffee -wco public/javascripts source/javascripts &
-	node_modules/.bin/stylus -w -o public/stylesheets source/stylesheets &
-	node_modules/.bin/jade -wPo public source/templates &
+	node_modules/.bin/coffee -wc javascripts &
+	node_modules/.bin/stylus -w stylesheets &
+	node_modules/.bin/jade -wPo . templates &
 
 .PHONY: all run build deploy push serve watch
