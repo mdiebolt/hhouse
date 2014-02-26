@@ -3,6 +3,7 @@ all: run
 run: watch serve
 
 build:
+	rm -rf public/stylesheets/* public/javascripts/* public/templates/*.html
 	node_modules/.bin/coffee -co public/javascripts source/javascripts
 	node_modules/.bin/stylus -o public/stylesheets source/stylesheets
 	node_modules/.bin/jade -Po public source/templates
