@@ -11,7 +11,7 @@ deploy: build push
 
 push:
 	git checkout gh-pages
-	git commit public -m "building site"
+	git commit javascripts/*.js stylesheets/*.css index.html -m "building site"
 	git push origin gh-pages
 	git checkout master
 
