@@ -1,0 +1,27 @@
+{
+  "name": "matic",
+  "version": "0.0.0",
+  "description": "Bare bones static site generator",
+  "main": "application.js",
+  "dependencies": {
+    "http-server": "~0.6.1",
+    "jade": "~1.1.5",
+    "stylus": "~0.42.2"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdiebolt/matic.git"
+  },
+  "keywords": [
+    "static site"
+  ],
+  "author": "Matt Diebolt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdiebolt/matic/issues"
+  },
+  "homepage": "https://github.com/mdiebolt/matic"
+}

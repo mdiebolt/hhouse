@@ -1,0 +1,99 @@
+light-blue = #ECEEE1
+medium-blue = #A8DACF
+
+medium-red = #F05B4F
+dark-red = #D8403A
+
+dark-gray = #221E1F
+
+header-height = 50px
+nav-width = 200px
+
+base-font-size = 18px
+base-line-height = 26px
+
+padding = 12px
+
+*
+  box-sizing border-box
+
+html, body
+  height 100%
+
+h1, h2, h3, h4, h5, h6
+  margin 0
+
+body
+  background-color medium-red
+  color light-blue
+  font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size base-font-size
+  line-height base-line-height
+  margin 0
+  padding 50px 0
+
+ul
+  list-style none
+  margin 0
+  padding-left 16px
+
+footer, header, nav.shows
+  color dark-gray
+  position absolute
+  left 0
+  padding padding
+
+header, footer
+  background-color medium-blue
+  width 100%
+  height 50px
+  z-index 1
+
+footer
+  bottom 0
+
+header
+  top 0
+
+.expand
+  display block
+  position absolute
+  top 0
+  right 0
+  margin padding
+  background-color light-blue
+  border-radius 3px
+  width 26px
+  height 26px
+  z-index 2
+
+nav.shows
+  display none
+  top 0
+  padding-top header-height + padding
+  background-color light-blue
+  width nav-width
+  height 100%
+
+  .list
+    padding padding
+
+    a
+      color dark-gray
+
+main
+  padding-left 0
+
+.content
+  padding padding
+
+@media (min-width: 768px)
+  nav.shows
+    display block
+
+  main
+    padding-left nav-width
+
+  .expand
+    display none
+
